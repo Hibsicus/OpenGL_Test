@@ -3,6 +3,10 @@
 #include <glew.h>
 #include <glfw3.h>
 
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
+
 class CreateWindow
 {
 public:
@@ -13,10 +17,20 @@ public:
 
 	static void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode);
 
+	static void mouse_callback(GLFWwindow* window, double xpose, double ypose);
+
+	static void scroll_callback(GLFWwindow* window, double xoffset, double yoffset);
+
 	void CreateImage(const char* path, GLuint &texture);
+	
+	void Do_Movement();
+
 
 private:
 	int Width, Height;
+
+	GLfloat deltaTime = 0.0f;
+	GLfloat lastFrame = 0.0f;
 
 	GLuint texture1, texture2;
 
