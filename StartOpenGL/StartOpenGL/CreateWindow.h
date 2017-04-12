@@ -25,6 +25,7 @@ public:
 	
 	void Do_Movement();
 
+	glm::vec3 lightPos;
 
 private:
 	int Width, Height;
