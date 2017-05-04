@@ -33,7 +33,7 @@ private:
 	GLfloat deltaTime = 0.0f;
 	GLfloat lastFrame = 0.0f;
 
-	GLuint texture1, texture2;
+	GLuint diffuseMap, specularMap ;
 
 	const GLchar* vertexShaderSource = "#version 330 core \n"
 		"layout (location = 0) in vec3 position;\n"
